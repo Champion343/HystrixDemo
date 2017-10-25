@@ -1,5 +1,8 @@
 package com.revature;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableDiscoveryClient
 public class HystrixDemoApplication {
 
+	private static final Logger LOG = Logger.getLogger(HystrixDemoApplication.class.getName()); // Gets a logger for this class
+
 	public static void main(String[] args) {
 		SpringApplication.run(HystrixDemoApplication.class, args);
 	}
@@ -23,6 +28,7 @@ public class HystrixDemoApplication {
 	
 	@RequestMapping("/hello")
 	public String helloEndpoint() {
+		LOG.log(Level.INFO, "\"/hello\" endpoint accessed in HystrixDemoApplication."); // Prints an entry to the log
 		return "hello";
 	}
 }
