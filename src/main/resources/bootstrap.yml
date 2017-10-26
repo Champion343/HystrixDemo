@@ -2,7 +2,7 @@ spring:
   application:
     name: HystrixDemo
   profiles:
-    active: dev
+    active: production
   cloud:    
     config:
       uri: http://18.220.92.71:8888
