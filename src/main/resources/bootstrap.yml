@@ -5,7 +5,7 @@ spring:
     active: dev
   cloud:    
     config:
-      uri: http://http://18.220.92.71:8888
+      uri: http://18.220.92.71:8888
       
 endpoints:
   refresh:
