@@ -19,7 +19,7 @@ public class EurekaClientConfiguration {
     private Integer serverPort;
     
     // Get the property variable within.ec2, else set it to false.
-    @Value("${within.ec2:false}")
+    @Value("${within.ec2:true}")
     private Boolean isWithinEc2;
     
     @Bean
