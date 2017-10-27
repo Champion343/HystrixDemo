@@ -26,6 +26,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 @EnableDiscoveryClient
 @EnableSwagger2
 public class HystrixDemoApplication {
+	
+	@Value("${word : default}") String word;
 
 	public static void main(String[] args) {
 		SpringApplication.run(HystrixDemoApplication.class, args);
@@ -34,7 +36,7 @@ public class HystrixDemoApplication {
 	
 	@RequestMapping("/hello")
 	public String helloEndpoint() {
-		return "hello";
+		return "hello " + word;
 	}
 	
 	
