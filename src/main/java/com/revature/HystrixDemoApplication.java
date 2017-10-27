@@ -27,7 +27,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 @EnableSwagger2
 public class HystrixDemoApplication {
 	
-	@Value("${word : default}") String word;
+	@Value("${word:default}") String word;
 
 	public static void main(String[] args) {
 		SpringApplication.run(HystrixDemoApplication.class, args);
