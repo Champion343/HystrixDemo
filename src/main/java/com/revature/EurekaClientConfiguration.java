@@ -31,7 +31,7 @@ public class EurekaClientConfiguration {
         eurekaBean.setPreferIpAddress(true);
         // Set the port where we can find this service
         eurekaBean.setNonSecurePortEnabled(true);
-        // eurekaBean.setNonSecurePort(serverPort);
+        eurekaBean.setNonSecurePort(serverPort);
         
         if (isWithinEc2) {
             RestTemplate restTemplate = new RestTemplate();
