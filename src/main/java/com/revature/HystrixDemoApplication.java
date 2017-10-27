@@ -36,7 +36,7 @@ public class HystrixDemoApplication {
 	
 	@RequestMapping("/hello")
 	public String helloEndpoint() {
-		return "hello " + word;
+		return "hello +" + word;
 	}
 	
 	
